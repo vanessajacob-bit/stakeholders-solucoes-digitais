@@ -1,6 +1,3 @@
-
----
-
 # 🏛️ 2) DXo | Setor Público
 
 ```markdown
