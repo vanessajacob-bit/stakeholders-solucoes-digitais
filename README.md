@@ -1,125 +1,211 @@
-# Mindmap – Compra de Soluções Digitais (Stakeholders)
+# Playbook — Mindmaps de Aquisição de Soluções Digitais (Setor + Solução)
 
 ```mermaid
 mindmap
-  root((Compra de Soluções Digitais))
-    Patrocinio_Executivo
-      CEO["Visão estratégica"]
-      CFO["ROI e viabilidade"]
-      COO["Execução e prioridades"]
-    Area_Demandante
-      CX_Operacoes["Eficiência, SLA, backlog"]
-      Digital_Produto["Jornada, adoção"]
-      Marketing_CRM["Automação, retenção"]
-    TI_e_Arquitetura
-      CIO["Governança e integração"]
-      Arquitetura["Padrões e escalabilidade"]
-      Infra_Cloud["Custos, HA, performance"]
-    Seguranca_e_Compliance
-      CISO["Segurança"]
-      LGPD_DPO["Privacidade"]
-      Risco_Auditoria["Controles"]
-    Compras_e_Juridico
-      Procurement["RFP e negociação"]
-      Juridico["Contrato e DPA"]
-    Execucao_e_Adocao
-      PMO["Cronograma e dependências"]
-      Change["Treinamento e engajamento"]
-    Usuarios_e_Champions
-      Usuarios_Finais["Usabilidade e ganho real"]
-      Champion_Interno["Influência e validação"]
+  root((Aquisição de Soluções Digitais))
+    01_Geral_Stakeholders
+      Patrocinio_Executivo
+        CEO_COO["Estratégia, prioridade, execução"]
+        CFO["ROI, TCO, previsibilidade"]
+        CHRO["Impacto em pessoas (quando muda operação)"]
+      Area_Demandante
+        CX_Operacoes["SLA, backlog, qualidade, escala"]
+        Digital_Produto["Jornada, adoção, omnicanal"]
+        Marketing_CRM["Conversão, retenção, campanhas"]
+      TI_e_Dados
+        CIO_TI["Integração, sustentação, padrão"]
+        Arquitetura["Escalabilidade, legado"]
+        Dados_IA["Governança, métricas, modelos"]
+      Bloqueios_Transversais
+        Seguranca_CISO["Acesso, logs, auditoria"]
+        LGPD_DPO["Privacidade, retenção, base legal"]
+        Risco_Auditoria["Controles, evidências"]
+        Juridico["Contrato, DPA, responsabilidades"]
+        Compras["RFP, negociação, risco fornecedor"]
+      Destravas
+        POC_Rapida["Prova de valor em 2-6 semanas"]
+        KPI_Negocio["Saving, conversão, NPS, SLA"]
+        Caso_Referencia["Case similar no setor"]
+        Governanca["RACI, plano de implantação, suporte"]
 
-mindmap
-  root((Banco - Compra de Soluções Digitais))
-    Lidera
-      CX_Operacoes["CX / Atendimento"]
-      Digital_Produtos["Canais Digitais"]
-    Patrocinio
-      COO["Eficiência operacional"]
-      CFO["ROI, redução de custo"]
-    Viabiliza
-      TI_Arquitetura["Integração core bancário"]
-      Dados_IA["Modelos e analytics"]
-    Bloqueia
-      Risco_Compliance["Bacen, auditoria"]
-      Seguranca["Fraude e acesso"]
-    Destrava
-      Evidencias
-        Case_Regulado["Cases em bancos regulados"]
-        ROI_Comprovado["Saving operacional"]
-        Compliance_LGPD["LGPD + Bacen"]
+    02_Segmentos_Mapa_de_Influencia
+      Banco_Financeiro
+        Lidera
+          Canais_Digitais["Digital / Canais"]
+          CX_Operacoes["Atendimento / Operações"]
+        Bloqueia
+          Risco_Compliance["Bacen, auditoria, AML"]
+          Seguranca["Fraude, identidade, acesso"]
+          Arquitetura["Core bancário e integrações"]
+        Evidencias_que_Destravem
+          Case_Regulado["Case em banco regulado"]
+          Controles["Logs, trilha, segregação"]
+          ROI["Redução custo + eficiência"]
+          Continuidade["SLA, DR, observabilidade"]
+      Energia_Utilities
+        Lidera
+          Operacoes["Operações / Atendimento"]
+          Campo_Engenharia["Serviços de campo / backoffice"]
+        Bloqueia
+          Regulacao["ANEEL, compliance setorial"]
+          Arquitetura["Legado crítico, integrações"]
+          Sustentacao["Disponibilidade e suporte"]
+        Evidencias_que_Destravem
+          Escala_Picos["Sazonalidade e picos"]
+          Reducao_Backlog["Backlog e SLA"]
+          Caso_Utilities["Case em utilities"]
+          Confiabilidade["Monitoramento e auditoria"]
+      Varejo
+        Lidera
+          Marketing["Conversão e retenção"]
+          Ecom_Digital["Omnichannel / e-commerce"]
+          Operacoes["Logística e atendimento"]
+        Bloqueia
+          Financeiro["Margem e custo"]
+          TI["Prioridade no roadmap"]
+        Evidencias_que_Destravem
+          Time_to_Value["Ganho em semanas"]
+          Conversao["Uplift conversão / ticket"]
+          Campanhas["Escala em datas (BF etc.)"]
+          Integracao["Integração rápida (APIs)"]
+      Saude
+        Lidera
+          Operacoes_Atendimento["Agendamento, atendimento"]
+          Area_Clinica["Protocolos e jornada"]
+        Bloqueia
+          Privacidade["Dados sensíveis, LGPD"]
+          Seguranca["Acesso e auditoria"]
+          Juridico["Responsabilidade e consentimento"]
+        Evidencias_que_Destravem
+          Protecao_Dados["Criptografia, RBAC, auditoria"]
+          Padroes["Trilhas e governança"]
+          Reducao_Tempo["Tempo de atendimento / no-show"]
+          Caso_Saude["Case em saúde"]
+      Seguros_Assistencia
+        Lidera
+          Sinistros["Operação de sinistros"]
+          Assistencia["Jornada de assistência"]
+          CX["Atendimento e retenção"]
+        Bloqueia
+          Fraude["Antifraude e risco"]
+          Juridico["Cláusulas e evidências"]
+          Integracoes["Parceiros e prestadores"]
+        Evidencias_que_Destravem
+          Reducao_Fraude["Sinais e controles"]
+          Tempo_Ciclo["Redução ciclo sinistro"]
+          Caso_Seguros["Case em seguradora"]
+          SLA_Rede["Controle da rede prestadora"]
+      Telecom
+        Lidera
+          Canais_Digitais["Apps, WhatsApp, voice"]
+          Operacoes["Atendimento massivo"]
+        Bloqueia
+          Seguranca["Fraude, SIM swap, identidade"]
+          TI["Legado BSS/OSS"]
+          Regulacao["Anatel e compliance"]
+        Evidencias_que_Destravem
+          Autenticacao["Camadas de autenticação"]
+          Escala["Milhões de contatos/mês"]
+          Caso_Telecom["Case telecom"]
+          Observabilidade["SRE, logs, alertas"]
+      Industria_Logistica
+        Lidera
+          Operacoes["Operação / chão de fábrica"]
+          Supply_Logistica["Supply / transporte"]
+        Bloqueia
+          TI_OT["OT/ICS e restrições"]
+          Seguranca["Rede industrial, acesso"]
+        Evidencias_que_Destravem
+          Reducao_Paradas["Impacto em paradas"]
+          Integracao_Sistemas["ERP/WMS/TMS"]
+          Caso_Industria["Case industrial/logística"]
+      Setor_Publico
+        Lidera
+          Area_Finalistica["Serviço ao cidadão"]
+          TI_Governo["TI e governança"]
+        Bloqueia
+          Compras_Licitacao["Processo licitatório"]
+          Seguranca["Requisitos e normas"]
+        Evidencias_que_Destravem
+          Conformidade["Requisitos, auditoria, evidências"]
+          Escala_Cidadao["Volume e acessibilidade"]
+          Caso_Publico["Referência no setor público"]
 
-mindmap
-  root((Energia - Compra de Soluções Digitais))
-    Lidera
-      Operacoes["Operações / Atendimento"]
-      Engenharia["Campo e backoffice"]
-    Patrocinio
-      COO["Continuidade e escala"]
-      Diretoria["Experiência do cliente"]
-    Viabiliza
-      TI["Integração sistemas legados"]
-      Dados["Medições e eventos"]
-    Bloqueia
-      Regulacao["ANEEL / Compliance"]
-      Arquitetura["Legado crítico"]
-    Destrava
-      Evidencias
-        Reducao_Backlog["Redução de backlog"]
-        Escala_Massiva["Picos e sazonalidade"]
-        Casos_Setor["Cases utilities"]
-
-mindmap
-  root((Varejo - Compra de Soluções Digitais))
-    Lidera
-      Marketing["Conversão e retenção"]
-      Digital["Omnichannel"]
-    Patrocinio
-      CMO["Receita"]
-      COO["Escala operacional"]
-    Viabiliza
-      TI["Integrações rápidas"]
-      Dados["Personalização"]
-    Bloqueia
-      Financeiro["Custo vs margem"]
-      TI["Prioridade roadmap"]
-    Destrava
-      Evidencias
-        Conversao["Aumento conversão"]
-        Time_to_Value["Resultado rápido"]
-        Black_Friday["Escala comprovada"]
-
-flowchart TD
-  A[Dor no atendimento] --> B[CX / Operações]
-  B --> C[POC rápida]
-  C --> D{Compliance OK?}
-  D -->|Não| E[Ajustes segurança]
-  D -->|Sim| F[CFO / ROI]
-  F --> G[Contratação]
-
-flowchart TD
-  A[Backoffice manual] --> B[Operações]
-  B --> C[Mapeamento processos]
-  C --> D[TI / Arquitetura]
-  D --> E[CFO]
-  E --> F[Escala]
-
-flowchart TD
-  A[Decisão pouco precisa] --> B[Dados / BI]
-  B --> C[Modelo / POC]
-  C --> D{Explicável?}
-  D -->|Não| E[Ajuste modelo]
-  D -->|Sim| F[Executivo]
-
-flowchart TD
-  A[Volume repetitivo] --> B[CX]
-  B --> C[UX Conversacional]
-  C --> D[TI]
-  D --> E[Produção]
-
-flowchart TD
-  A[Documentos manuais] --> B[Operações]
-  B --> C[Jurídico / Compliance]
-  C --> D[TI]
-  D --> E[Contratação]
-
+    03_Solucoes_Produtos_Mapa_de_Compra
+      Orquestrador
+        Lidera
+          CX_Digital["Canais e jornada"]
+          TI_Arquitetura["Integrações e padrão"]
+        Bloqueia
+          Arquitetura["Padronização e legado"]
+          Seguranca["Acesso e logs"]
+        Evidencias_que_Destravem
+          Reducao_Friccao["Menos handoff entre canais"]
+          Governanca_Fluxos["Rastreabilidade e auditoria"]
+          API_First["Integração por APIs"]
+      WhatsApp_e_Voice_IA
+        Lidera
+          CX_Operacoes["Volume e eficiência"]
+          Digital["Canal estratégico"]
+        Bloqueia
+          LGPD["Consentimento e retenção"]
+          Seguranca["Autenticação e fraude"]
+        Evidencias_que_Destravem
+          POC_Atendimento["TMA/FCR/backlog"]
+          Logs_Auditoria["Trilhas e gravações (quando aplicável)"]
+          Reducao_Custo["Saving em atendimento"]
+      RPA_Automacao
+        Lidera
+          Operacoes_Backoffice["Processos manuais"]
+          PMO_Transformacao["Produtividade"]
+        Bloqueia
+          TI["Acesso a sistemas"]
+          Excecoes_Processo["Processo não padronizado"]
+        Evidencias_que_Destravem
+          Mapa_Processo["As-is/to-be + regras"]
+          Saving_FTE["Economia e compliance"]
+          Monitoramento["Evidência e controle"]
+      Analytics_e_IA
+        Lidera
+          DataOffice["Dados e governança"]
+          Area_Negocio["Decisão e performance"]
+        Bloqueia
+          Qualidade_Dados["Base inconsistente"]
+          Explicabilidade["Caixa preta"]
+        Evidencias_que_Destravem
+          Metricas["Baseline + ganho"]
+          MLOps["Monitoramento de drift"]
+          Explicavel["Regras/explicação"]
+      Chatbot
+        Lidera
+          CX["Autoatendimento"]
+          Digital["Experiência do usuário"]
+        Bloqueia
+          UX_Ruim["Bot genérico"]
+          Conteudo["Base de conhecimento fraca"]
+        Evidencias_que_Destravem
+          Designer_Conversacional["Intenções e fluxos"]
+          Handoff_Humano["Fallback e governança"]
+          Resultado_Rapido["Deflexão + satisfação"]
+      Gestao_Documental_GetDoc
+        Lidera
+          Operacoes["Documentos e rastreio"]
+          Juridico_Compliance["Evidência e controle"]
+        Bloqueia
+          Acesso_Permissao["Controle de acesso"]
+          Retencao["Políticas e versão"]
+        Evidencias_que_Destravem
+          Trilha_Auditoria["Versionamento e logs"]
+          Link_vs_Repositorio["Modelo de referência (link/armazenamento)"]
+          Caso_Similar["Case e ganhos"]
+      Integracoes_APIs
+        Lidera
+          TI_Arquitetura["Padronização e sustentabilidade"]
+          Dono_Sistema["Prioridade de integração"]
+        Bloqueia
+          Legado["Limitações técnicas"]
+          Governanca["Mudança e dependências"]
+        Evidencias_que_Destravem
+          Catalogo_APIs["Contrato e documentação"]
+          Plano_Rollout["Fases e mitigação"]
+          SLA_Suporte["Operação e observabilidade"]
