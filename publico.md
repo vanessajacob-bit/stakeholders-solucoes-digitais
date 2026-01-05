@@ -1,5 +1,3 @@
-# 🏛️ 2) DXo | Setor Público
-
 ```markdown
 ## 🏛️ DXo | Setor Público — Mapa de Influência para Aquisição de Soluções Digitais
 
